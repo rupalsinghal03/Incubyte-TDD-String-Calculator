@@ -4,11 +4,15 @@ function add(numbers) {
     // const num = parseInt(numbers, 10);
     // return isNaN(num) ? 0 : num;
 
-    const nums = numbers.split(",").map(Number);
+    // const nums = numbers.split(",").map(Number);
+    // return nums.reduce((sum, n) => sum + n, 0);
+
+    const nums = numbers.split(/,|\n/).map(Number);
     return nums.reduce((sum, n) => sum + n, 0);
 
 }
 
 // console.log(add(""));
 // console.log(add("1"));
-console.log(add("1,5,3"));
+// console.log(add("1,5,3"));
+console.log(add("1\n2,3"));
